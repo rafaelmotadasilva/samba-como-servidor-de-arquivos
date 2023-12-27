@@ -29,7 +29,7 @@ Em seguida, execute:
 
 *sudo ./samba-file-server.sh*
 
-* *[O arquivo de shell script de exemplo usado está disponível aqui](https://github.com/rafaelmotadasilva/samba-file-server/blob/main/samba-file-server.sh)*
+* *[O arquivo de exemplo usado está disponível aqui](https://github.com/rafaelmotadasilva/samba-file-server/blob/main/samba-file-server.sh)*
 
 ## Habilite a nova configuração
 *sudo systemctl restart smbd.service nmbd.service*
