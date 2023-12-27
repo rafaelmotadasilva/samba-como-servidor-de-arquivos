@@ -20,6 +20,41 @@ O arquivo de configuração principal do Samba está localizado em **/etc/samba/
 
 * *O arquivo de configuração **smb.conf** usado como exemplo está disponível [aqui](https://github.com/rafaelmotadasilva/samba-file-server/blob/main/smb.conf)*
 
+## O shell script
+#!/bin/bash  
+####################################  
+#  
+# Backup to NFS mount script.  
+#  
+####################################  
+    
+# What to backup.  
+backup_files="/home /var/spool/mail /etc /root /boot /opt"  
+    
+# Where to backup to.  
+dest="/mnt/backup"  
+    
+# Create archive filename.  
+day=$(date +%A)  
+hostname=$(hostname -s)  
+archive_file="$hostname-$day.tgz"  
+    
+# Print start status message.  
+echo "Backing up $backup_files to $dest/$archive_file"  
+date  
+echo  
+    
+# Backup the files using tar.  
+tar czf $dest/$archive_file $backup_files  
+    
+# Print end status message.  
+echo  
+echo "Backup finished"  
+date  
+    
+# Long listing of files in $dest to check file sizes.  
+ls -lh $dest  
+
 ## Habilite a nova configuração
 *sudo systemctl restart smbd.service nmbd.service*
 
