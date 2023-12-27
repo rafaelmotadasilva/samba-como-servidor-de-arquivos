@@ -6,8 +6,6 @@
  ## Instale o Samba
 *sudo apt install samba*
 
-*******
-
 ## Configure o Samba como um servidor de arquivos
 O arquivo de configuração principal do Samba está localizado em **/etc/samba/smb.conf**
 
