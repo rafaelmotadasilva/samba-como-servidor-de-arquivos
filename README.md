@@ -11,7 +11,7 @@ Desde 1992 o Samba é uma das maneiras mais comuns de compartilhamento de arquiv
 ## Configure o Samba como um servidor de arquivos
 Primeiro, edite o parâmetro **workgroup** na seção **[global]** em **/etc/samba/smb.conf** e altere-o para melhor corresponder ao seu ambiente:
 
-***workgroup = EXAMPLE***
+***workgroup = EXEMPLO***
 
 Crie uma nova seção na parte inferior do arquivo ou remova o comentário de um dos exemplos para o diretório que deseja compartilhar:
 
