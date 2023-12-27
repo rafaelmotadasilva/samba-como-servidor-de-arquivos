@@ -1,6 +1,4 @@
 # Samba como servidor de arquivos
-  Samba é Software Livre licenciado sob a Licença Pública Geral GNU , o projeto Samba é membro da Software Freedom Conservancy .
-
 Desde 1992 , o Samba fornece serviços de arquivo e impressão seguros, estáveis ​​e rápidos para todos os clientes que usam o protocolo SMB/CIFS, como todas as versões de DOS e Windows, OS/2, Linux e muitos outros.
 
  *******
