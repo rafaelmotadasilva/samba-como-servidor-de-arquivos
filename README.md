@@ -4,6 +4,8 @@ Desde 1992 o Samba é uma das maneiras mais comuns de compartilhamento de arquiv
 <img align="right" src="SambaLogo.png">
  
  ## Instale o Samba
+ O primeiro passo é instalar o samba. Em um terminal, digite:
+
 *sudo apt install samba*
 
 ## Configure o Samba como um servidor de arquivos
