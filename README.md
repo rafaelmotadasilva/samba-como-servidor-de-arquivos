@@ -9,61 +9,67 @@ O arquivo de configuração principal do Samba está localizado em **/etc/samba/
 
 Primeiro, edite o parâmetro **workgroup** na seção **[global] /etc/samba/smb.conf** e altere-o para melhor corresponder ao seu ambiente:
 
-**workgroup = EXAMPLE**
+*workgroup = EXAMPLE*
 
 Crie uma nova seção na parte inferior do arquivo ou remova o comentário de um dos exemplos para o diretório que deseja compartilhar:
 
-[publica]
+*******
 
-   comment = Pública
+*[publica]*
 
-   path = /srv/samba/share/publica
+   *comment = Pública*
 
-   writable = yes
+   *path = /srv/samba/share/publica*
 
-   guest ok = yes
+   *writable = yes*
 
-   guest only = yes
+   *guest ok = yes*
 
-[financeiro]
+   *guest only = yes*
 
-   comment = Financeiro
 
-   path = /srv/samba/share/financeiro
+*[financeiro]*
 
-   writable = yes
+   *comment = Financeiro*
 
-   valid users = @financeiro
+   *path = /srv/samba/share/financeiro*
 
-   force group = financeiro
+   *writable = yes*
 
-   directory mask = 0770
+   *valid users = @financeiro*
 
-   create mask = 0770
+   *force group = financeiro*
 
-   force directory mode= 0770
+   *directory mask = 0770*
 
-   force create mode= 0770
+   *create mask = 0770*
 
-[suporte]
+   *force directory mode= 0770*
 
-   comment = Suporte
+   *force create mode= 0770*
 
-   path = /srv/samba/share/suporte
 
-   writable = yes
+*[suporte]*
 
-   valid users = @suporte
+   *comment = Suporte*
 
-   force group = suporte
+   *path = /srv/samba/share/suporte*
 
-   directory mask = 0770
+   *writable = yes*
 
-   create mask = 0770
+   *valid users = @suporte*
 
-   force directory mode= 0770
+   *force group = suporte*
 
-   force create mode= 0770
+   *directory mask = 0770*
+
+   *create mask = 0770*
+
+   *force directory mode= 0770*
+
+   *force create mode= 0770*
+
+*******
 
 ## Habilite a nova configuração
 sudo systemctl restart smbd.service nmbd.service
