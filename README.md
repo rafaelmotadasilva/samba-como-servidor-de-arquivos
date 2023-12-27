@@ -8,7 +8,7 @@ Desde 1992 o Samba é uma das maneiras mais comuns de compartilhamento de arquiv
 
 ## Configure o Samba como um servidor de arquivos
 
-Primeiro, edite o parâmetro **workgroup** na seção **[global] /etc/samba/smb.conf** e altere-o para melhor corresponder ao seu ambiente:
+Primeiro, edite o parâmetro **workgroup** na seção **[global]** em **/etc/samba/smb.conf** e altere-o para melhor corresponder ao seu ambiente:
 
 *workgroup = EXAMPLE*
 
