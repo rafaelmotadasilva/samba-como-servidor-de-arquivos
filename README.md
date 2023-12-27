@@ -1,16 +1,16 @@
 # Samba como servidor de arquivos
 Desde 1992 o Samba é uma das maneiras mais comuns de compartilhamento de arquivos, diretórios, entre outros, com máquinas que rodam o Windows.
 
-* [Acesse a configuração usada como exemplo clicando aqui](https://github.com/rafaelmotadasilva/samba-file-server/blob/main/smb.conf)
-
-* [Código disponível](https://github.com/rafaelmotadasilva/samba-file-server/blob/main/samba-file-server.sh)
-
 <img align="right" src="SambaLogo.png">
  
  ## Instale o Samba
  O primeiro passo é instalar o samba. Em um terminal, digite:
 
 *sudo apt install samba*
+
+* [Acesse a configuração usada como exemplo clicando aqui](https://github.com/rafaelmotadasilva/samba-file-server/blob/main/smb.conf)
+
+* [Código disponível](https://github.com/rafaelmotadasilva/samba-file-server/blob/main/samba-file-server.sh)
 
 ## Configure o Samba como um servidor de arquivos
 Primeiro, edite o parâmetro **workgroup** na seção **[global]** em **/etc/samba/smb.conf** e altere-o para melhor corresponder ao seu ambiente:
