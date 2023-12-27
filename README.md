@@ -1,7 +1,7 @@
 # Samba como servidor de arquivos
 Desde 1992 o Samba é uma das maneiras mais comuns de compartilhamento de arquivos, diretórios, entre outros, com máquinas que rodam o Windows.
 
-<img align="right" src="SambaLogo.png" width="200">
+<img align="right" src="SambaLogo.png">
  
  ## Instale o Samba
 *sudo apt install samba*
