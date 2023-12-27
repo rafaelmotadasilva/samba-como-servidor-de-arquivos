@@ -1,8 +1,12 @@
 # Samba como servidor de arquivos
  Uma das maneiras mais comuns de compartilhamento de arquivos, diretórios, entre outros, com máquinas que rodam o Windows.
+
+ *******
  
  ## Instale o Samba
 *sudo apt install samba*
+
+*******
 
 ## Configure o Samba como um servidor de arquivos
 O arquivo de configuração principal do Samba está localizado em **/etc/samba/smb.conf**
@@ -27,7 +31,6 @@ Crie uma nova seção na parte inferior do arquivo ou remova o comentário de um
 
    *guest only = yes*
 
-
 *[financeiro]*
 
    *comment = Financeiro*
@@ -47,7 +50,6 @@ Crie uma nova seção na parte inferior do arquivo ou remova o comentário de um
    *force directory mode= 0770*
 
    *force create mode= 0770*
-
 
 *[suporte]*
 
