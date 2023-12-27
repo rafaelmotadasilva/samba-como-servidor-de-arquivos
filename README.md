@@ -1,9 +1,9 @@
 # Samba como servidor de arquivos
 Desde 1992 o Samba é uma das maneiras mais comuns de compartilhamento de arquivos, diretórios, entre outros, com máquinas que rodam o Windows.
 
-* [O arquivo de configuração **smb.conf** usado como exemplo está disponível aqui](https://github.com/rafaelmotadasilva/samba-file-server/blob/main/smb.conf)
+* [Acesse o **smb.conf** usado como exemplo está disponível aqui](https://github.com/rafaelmotadasilva/samba-file-server/blob/main/smb.conf)
 
-* [O arquivo de shell script **samba-file-server.sh** usado como exemplo está disponível aqui](https://github.com/rafaelmotadasilva/samba-file-server/blob/main/samba-file-server.sh)
+* [Código disponível](https://github.com/rafaelmotadasilva/samba-file-server/blob/main/samba-file-server.sh)
 
 <img align="right" src="SambaLogo.png">
  
