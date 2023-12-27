@@ -16,7 +16,7 @@ Crie uma nova seção na parte inferior do arquivo ou remova o comentário de um
 
 O arquivo de configuração principal do Samba está localizado em **/etc/samba/smb.conf**
 
-* Acesse o arquivo de configuração principal do Samba clicando [aqui](#)
+* *Acesse o arquivo de configuração principal do Samba clicando* [aqui](#)
 
 ## Habilite a nova configuração
 sudo systemctl restart smbd.service nmbd.service
