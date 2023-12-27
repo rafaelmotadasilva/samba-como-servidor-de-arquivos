@@ -1,5 +1,7 @@
 # Samba como servidor de arquivos
- Uma das maneiras mais comuns de compartilhamento de arquivos, diretórios, entre outros, com máquinas que rodam o Windows.
+  Samba é Software Livre licenciado sob a Licença Pública Geral GNU , o projeto Samba é membro da Software Freedom Conservancy .
+
+Desde 1992 , o Samba fornece serviços de arquivo e impressão seguros, estáveis ​​e rápidos para todos os clientes que usam o protocolo SMB/CIFS, como todas as versões de DOS e Windows, OS/2, Linux e muitos outros.
 
  *******
  
