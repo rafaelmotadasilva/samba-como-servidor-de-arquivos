@@ -9,7 +9,6 @@ Desde 1992 o Samba é uma das maneiras mais comuns de compartilhamento de arquiv
 *sudo apt install samba*
 
 ## Configure o Samba como um servidor de arquivos
-
 Primeiro, edite o parâmetro **workgroup** na seção **[global]** em **/etc/samba/smb.conf** e altere-o para melhor corresponder ao seu ambiente:
 
 *workgroup = EXAMPLE*
@@ -20,10 +19,18 @@ O arquivo de configuração principal do Samba está localizado em **/etc/samba/
 
 * *O arquivo de configuração **smb.conf** usado como exemplo está disponível [aqui](https://github.com/rafaelmotadasilva/samba-file-server/blob/main/smb.conf)*
 
-## O shell script
+## Executando o script
+Execute a partir de um terminal
 
-Acesse o shell script clicando [aqui]()
+A maneira mais simples de usar o script é copiar e colar o conteúdo em um arquivo (chamado samba-file-server.sh, por exemplo). O arquivo deve ser tornado executável:
+
+*chmod u+x samba-file-server.sh*
+
+Em seguida, em um terminal, execute o seguinte comando:
+
+*sudo ./samba-file-server.sh*
+
+* *O arquivo de configuração **samba-file-server.sh** usado como exemplo está disponível [aqui](https://github.com/rafaelmotadasilva/samba-file-server/blob/main/samba-file-server.sh)*
 
 ## Habilite a nova configuração
 *sudo systemctl restart smbd.service nmbd.service*
-
