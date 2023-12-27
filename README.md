@@ -8,10 +8,6 @@ Desde 1992 o Samba é uma das maneiras mais comuns de compartilhamento de arquiv
 
 *sudo apt install samba*
 
-* [Acesse a configuração usada como exemplo clicando aqui](https://github.com/rafaelmotadasilva/samba-file-server/blob/main/smb.conf)
-
-* [Código disponível](https://github.com/rafaelmotadasilva/samba-file-server/blob/main/samba-file-server.sh)
-
 ## Configure o Samba como um servidor de arquivos
 Primeiro, edite o parâmetro **workgroup** na seção **[global]** em **/etc/samba/smb.conf** e altere-o para melhor corresponder ao seu ambiente:
 
