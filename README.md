@@ -16,63 +16,7 @@ Crie uma nova seção na parte inferior do arquivo ou remova o comentário de um
 
 O arquivo de configuração principal do Samba está localizado em **/etc/samba/smb.conf**
 
-* [Acesse o arquivo de configuração clicando aqui](#)
-
-*******
-
-*[publica]*
-
-   *comment = Pública*
-
-   *path = /srv/samba/share/publica*
-
-   *writable = yes*
-
-   *guest ok = yes*
-
-   *guest only = yes*
-
-*[financeiro]*
-
-   *comment = Financeiro*
-
-   *path = /srv/samba/share/financeiro*
-
-   *writable = yes*
-
-   *valid users = @financeiro*
-
-   *force group = financeiro*
-
-   *directory mask = 0770*
-
-   *create mask = 0770*
-
-   *force directory mode= 0770*
-
-   *force create mode= 0770*
-
-*[suporte]*
-
-   *comment = Suporte*
-
-   *path = /srv/samba/share/suporte*
-
-   *writable = yes*
-
-   *valid users = @suporte*
-
-   *force group = suporte*
-
-   *directory mask = 0770*
-
-   *create mask = 0770*
-
-   *force directory mode= 0770*
-
-   *force create mode= 0770*
-
-*******
+* [Acesse o arquivo de configuração principal do Samba clicando aqui](#)
 
 ## Habilite a nova configuração
 sudo systemctl restart smbd.service nmbd.service
