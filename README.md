@@ -17,7 +17,7 @@ Crie uma nova seção na parte inferior do arquivo ou remova o comentário de um
 
 O arquivo de configuração principal do Samba está localizado em **/etc/samba/smb.conf**
 
-* *O arquivo de configuração **smb.conf** usado como exemplo está disponível [aqui](https://github.com/rafaelmotadasilva/samba-file-server/blob/main/smb.conf)*
+* *[O arquivo de configuração **smb.conf** usado como exemplo está disponível aqui](https://github.com/rafaelmotadasilva/samba-file-server/blob/main/smb.conf)*
 
 ## Executando o script
 
@@ -29,7 +29,7 @@ Em seguida, execute:
 
 *sudo ./samba-file-server.sh*
 
-* *O arquivo de shell script **samba-file-server.sh** usado como exemplo está disponível [aqui](https://github.com/rafaelmotadasilva/samba-file-server/blob/main/samba-file-server.sh)*
+* *[O arquivo de shell script **samba-file-server.sh** usado como exemplo está disponível aqui](https://github.com/rafaelmotadasilva/samba-file-server/blob/main/samba-file-server.sh)*
 
 ## Habilite a nova configuração
 *sudo systemctl restart smbd.service nmbd.service*
