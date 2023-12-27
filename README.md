@@ -21,7 +21,7 @@ O arquivo de configuração principal do Samba está localizado em **/etc/samba/
 
 ## Executando o script
 
-A maneira mais simples de usar o script é torna-lo executável:
+O arquivo **samba-file-server.sh** deve ser tornado executável:
 
 *chmod u+x samba-file-server.sh*
 
