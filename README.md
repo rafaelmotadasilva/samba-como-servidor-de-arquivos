@@ -33,3 +33,11 @@ Em seguida, execute:
 
 ## Habilite a nova configuração
 * *sudo systemctl restart smbd.service nmbd.service*
+
+```Yaml
+samba_shares:
+  - name: piratecove
+    comment: 'A place for pirates to hang out'
+    group: pirates
+    write_list: +pirates
+```
