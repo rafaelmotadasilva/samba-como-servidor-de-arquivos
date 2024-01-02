@@ -33,29 +33,29 @@ Crie uma nova seção na parte inferior do arquivo ou remova o comentário de um
     read only = no
     create mask = 0755
  ```
- * comment
+ * **comment**
 
  Uma breve descrição do compartilhamento. Ajuste para atender às suas necessidades.
 
- * path
+ * **path**
 
  O caminho para o diretório que você deseja compartilhar.
 
  >**Nota:**
  Este exemplo usa **/srv/samba/nome-de-compartilhamento** porque, de acordo com o *Filesystem Hierarchy Standard (FHS)*, **/srv** é onde os dados específicos do site devem ser servidos. Tecnicamente, os compartilhamentos do Samba podem ser colocados em qualquer lugar do sistema de arquivos, desde que as permissões estejam corretas, mas é recomendável aderir aos padrões.
 
- * browsable
+ * **browsable**
 
  Permite que clientes Windows naveguem no diretório compartilhado usando o Windows Explorer.
 
- * guest ok
+ * **guest ok**
 
  Permite que os clientes se conectem ao compartilhamento sem fornecer uma senha.
 
- * read only
+ * **read only**
 
  Determina se o compartilhamento é somente leitura ou se são concedidos privilégio de gravação. Os privilégios de gravação são permitidos somente quando o valor é *no*, como é visto neste exemplo. Se o valor for *yes*, o acesso ao compartilhamento será somente leitura.
 
- * create mask
+ * **create mask**
 
  Determina as permissões que novos arquivos terão quando criados.
