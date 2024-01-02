@@ -6,7 +6,7 @@ O servidor será configurado para compartilhar arquivos com qualquer cliente da 
 
 ## Instale o Samba
 
-O primeiro passo é instalar o pacote samba. Em um terminal, digite:
+O primeiro passo é instalar o pacote `samba`. Em um terminal, digite:
 
 ```
 sudo apt install samba
