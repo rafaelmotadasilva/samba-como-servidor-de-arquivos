@@ -70,7 +70,7 @@ Crie uma nova seção na parte inferior do arquivo ou remova o comentário de um
  ```
 A opção `-p` informa ao `mkdir` para criar a árvore de diretórios inteira, se ela ainda não existir.
 
-## Habilite a nova configuração
+### Habilite a nova configuração
 
 Por fim, reinicie os serviços Samba para habilitar a nova configuração executando o seguinte comando:
 
