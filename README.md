@@ -78,7 +78,7 @@ Por fim, reinicie os serviços Samba para habilitar a nova configuração execut
 sudo systemctl restart smbd.service nmbd.service
 ```
 
-A partir de um cliente Windows, agora você poderá navegar até o servidor de arquivos Ubuntu e ver o diretório compartilhado. Se o seu cliente não mostrar o seu compartilhamento automaticamente, tente acessar o seu servidor pelo seu endereço IP, por exemplo `\\\192.168.1.1`, em uma janela do Windows Explorer. Para verificar se tudo está funcionando, tente criar um diretório no Windows.
+A partir de um cliente Windows, agora você poderá navegar até o servidor de arquivos Ubuntu e ver o diretório compartilhado. Se o seu cliente não mostrar o seu compartilhamento automaticamente, tente acessar o seu servidor pelo seu endereço IP, por exemplo `\\192.168.1.1`, em uma janela do Windows Explorer. Para verificar se tudo está funcionando, tente criar um diretório no Windows.
 
 Para compartilhamentos adicionais, basta criar novas seções *[nome-de-compartilhamento]* em `/etc/samba/smb.conf` e reiniciar o *Samba*. Apenas certifique-se que o diretório que você deseja compartilhar realmente exista e que as permissões estejam corretas.
 
