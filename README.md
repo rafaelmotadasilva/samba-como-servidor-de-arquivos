@@ -59,3 +59,14 @@ Crie uma nova seção na parte inferior do arquivo ou remova o comentário de um
  * **create mask**
 
  Determina as permissões que novos arquivos terão quando criados.
+
+ ## Crie o diretório
+
+ Agora que o Samba está configurado, o diretório precisa ser criado e as permissões alteradas. Em um terminal execute os seguintes comandos:
+
+ ```
+ sudo mkdir -p /srv/samba/compartilhamento
+ sudo chown nobody:nogroup /srv/samba/compartilhamento
+ ```
+A opção **-p** informa o **mkdir** para criar a árvore de diretórios inteira, se ela ainda não existir.
+
