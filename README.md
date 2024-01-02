@@ -2,7 +2,7 @@
 
 Uma das maneiras mais comuns de conectar computadores Ubuntu e Windows em rede é configurar o Samba como um *servidor de arquivos.* Pode ser configurado para compartilhar arquivos com clientes Windows, como veremos nesta seção.
 
-O servidor será configurado para compartilhar arquivos com qualquer cliete da rede sem solicitar senha.
+O servidor será configurado para compartilhar arquivos com qualquer cliente da rede sem solicitar senha.
 
 ## Instale o Samba
 
