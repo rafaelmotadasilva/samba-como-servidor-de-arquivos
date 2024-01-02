@@ -60,7 +60,7 @@ Crie uma nova seção na parte inferior do arquivo ou remova o comentário de um
 
  Determina as permissões que novos arquivos terão quando criados.
 
- ## Crie o diretório
+ ### Crie o diretório
 
  Agora que o Samba está configurado, o diretório precisa ser criado e as permissões alteradas. Em um terminal execute os seguintes comandos:
 
