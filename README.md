@@ -68,5 +68,5 @@ Crie uma nova seção na parte inferior do arquivo ou remova o comentário de um
  sudo mkdir -p /srv/samba/compartilhamento
  sudo chown nobody:nogroup /srv/samba/compartilhamento
  ```
-A opção **-p** informa o **mkdir** para criar a árvore de diretórios inteira, se ela ainda não existir.
+A opção **-p** informa ao **mkdir** para criar a árvore de diretórios inteira, se ela ainda não existir.
 
