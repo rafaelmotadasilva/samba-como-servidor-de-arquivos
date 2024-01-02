@@ -1,6 +1,6 @@
 # Samba como servidor de arquivos
 
-Uma das maneiras mais comuns de conectar computadores Linux e Windows em rede é configurar o Samba como um *servidor de arquivos.*
+Uma das maneiras mais comuns de conectar computadores Ubuntu e Windows em rede é configurar o Samba como um *servidor de arquivos.*
 
 ## Instale o Samba
 
