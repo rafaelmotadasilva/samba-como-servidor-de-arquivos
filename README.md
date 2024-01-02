@@ -7,5 +7,5 @@ Uma das maneiras mais comuns de conectar computadores Ubuntu e Windows em rede Ã
 O primeiro passo Ã© instalar o pacote samba. Em um terminal, digite:
 
 ```
-
+sudo apt install samba
 ```
