@@ -1,35 +1,11 @@
 # Samba como servidor de arquivos
-Desde 1992 o Samba é uma das maneiras mais comuns de compartilhamento de arquivos, diretórios, entre outros, com máquinas que rodam o Windows.
 
-<img align="right" src="SambaLogo.png">
- 
- ## Instale o Samba
- O primeiro passo é instalar o samba. Em um terminal, digite:
+Uma das maneiras mais comuns de conectar computadores Ubuntu e Windows em rede é configurar o Samba como um *servidor de arquivos.* Pode ser configurado para compartilhar arquivos com clientes Windows, como veremos nessa seção.
 
-* *sudo apt install samba*
+## Instale o Samba
 
-## Configure o Samba como um servidor de arquivos
-Primeiro, edite o parâmetro **workgroup** na seção **[global]** em **/etc/samba/smb.conf** e altere-o para melhor corresponder ao seu ambiente:
+O primeiro passo é instalar o pacote samba. Em um terminal, digite:
 
-***workgroup = EXEMPLO***
+```
 
-Crie uma nova seção na parte inferior do arquivo ou remova o comentário de um dos exemplos para o diretório que deseja compartilhar:
-
-O arquivo de configuração principal do Samba está localizado em **/etc/samba/smb.conf**
-
-[O arquivo usado como exemplo está disponível aqui](https://github.com/rafaelmotadasilva/samba-file-server/blob/main/smb.conf)
-
-## Executando o script
-
-O arquivo deve ser tornado executável, em um terminal, execute o seguinte comando:
-
-* *chmod u+x samba-file-server.sh*
-
-Em seguida, execute:
-
-* *sudo ./samba-file-server.sh*
-
-[O arquivo usado como exemplo está disponível aqui](https://github.com/rafaelmotadasilva/samba-file-server/blob/main/samba-file-server.sh)
-
-## Habilite a nova configuração
-* *sudo systemctl restart smbd.service nmbd.service*
+```
