@@ -82,3 +82,4 @@ A partir de um cliente Windows, agora você poderá navegar até o servidor de a
 
 Para compartilhamentos adicionais, basta criar novas seções *[nome-de-compartilhamento]* em **/etc/samba/smb.conf** e reiniciar o *Samba*. Apenas certifique-se que o diretório que você deseja compartilhar realmente exista e que as permissões estejam corretas.
 
+O compartilhamento de arquivo denominado *[compartilhamento]* e o caminho **/srv/samba/nome-de-compartilhamento** neste exemplo podem ser ajustados para se adequar ao seu ambiente. É uma boa ideia nomear um compartilhamento com o nome de um diretório no sistema de arquivos.
