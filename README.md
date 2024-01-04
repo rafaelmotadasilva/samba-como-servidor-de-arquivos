@@ -41,8 +41,7 @@ Crie uma nova seção na parte inferior do arquivo ou remova o comentário de um
 
  O caminho para o diretório que você deseja compartilhar.
 
- >**Nota**:
- 
+ >**Nota**:  
  Este exemplo usa `/srv/samba/nome-de-compartilhamento` porque, de acordo com o *Filesystem Hierarchy Standard (FHS)*, **/srv** é onde os dados específicos do site devem ser servidos. Tecnicamente, os compartilhamentos do Samba podem ser colocados em qualquer lugar do sistema de arquivos, desde que as permissões estejam corretas, mas é recomendável aderir aos padrões.
 
  * **browsable**
