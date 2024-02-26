@@ -1,85 +1,80 @@
-# Samba como servidor de arquivos
+# Configurando o Samba como Servidor de Arquivos
 
-Uma das maneiras mais comuns de conectar computadores Ubuntu e Windows em rede é configurar o Samba como um *servidor de arquivos.* Pode ser configurado para compartilhar arquivos com clientes Windows, como veremos nesta seção.
+O Samba facilita o compartilhamento de arquivos em redes com sistemas Ubuntu e Windows. Este guia demonstra como configurá-lo como servidor de arquivos no Ubuntu, permitindo acesso e compartilhamento de arquivos pelos clientes Windows.
 
-O servidor será configurado para compartilhar arquivos com qualquer cliente da rede sem solicitar senha.
+## Visão Geral
 
-## Instale o Samba
+Este guia oferece instruções passo a passo para configurar o Samba como servidor de arquivos em um ambiente Ubuntu. Ele abrange desde a instalação do pacote Samba até a configuração dos compartilhamentos de diretórios.
 
-O primeiro passo é instalar o pacote `samba`. Em um terminal, digite:
+## Requisitos
 
-```
+* Sistema operacional Ubuntu instalado.
+* Acesso ao terminal com privilégios de superusuário para executar comandos.
+
+## Instruções
+
+1. [Instalação do Samba](#instalação-do-samba)
+2. [Configurando o Samba como Servidor de Arquivos](#configurando-o-samba-como-servidor-de-arquivos)
+3. [Criando os Diretórios Compartilhados](#criando-os-diretórios-compartilhados)
+4. [Ativando a Nova Configuração](#ativando-a-nova-configuração)
+5. [Conclusão](#conclusão)
+
+## Instalação do Samba
+
+Comece instalando o pacote samba. Abra um terminal e digite o seguinte comando:
+
+
 sudo apt install samba
-```
-Isso é tudo; agora você está pronto para configurar o Samba para compartilhar arquivos.
 
-## Configure o Samba como um servidor de arquivos
 
-O arquivo de configuração principal do Samba está localizado em `/etc/samba/smb.conf`.
+## Configurando o Samba como Servidor de Arquivos
 
-Primeiro, edite o `workgroup` parâmetro na seção *[global]* `/etc/samba/smb.conf` e altere-o para melhor corresponder ao seu ambiente:
+O arquivo de configuração principal do Samba está localizado em /etc/samba/smb.conf. Abra este arquivo em um editor de texto de sua preferência e ajuste as configurações conforme necessário. Aqui estão algumas configurações essenciais que você pode personalizar na seção *[global]*:
 
-```
-workgroup = EXEMPLO
-```
-Crie uma nova seção na parte inferior do arquivo ou remova o comentário de um dos exemplos para o diretório que deseja compartilhar:
+*workgroup*: Define o nome do grupo de trabalho.  
+*security*: Define o nível de segurança do Samba.
 
-```
+Para compartilhar diretórios específicos, adicione seções no arquivo smb.conf para cada diretório desejado, conforme o exemplo abaixo:
+
+
 [compartilhamento]
-    comment = Compartilhamento
+    comment = Descrição do Compartilhamento
     path = /srv/samba/compartilhamento
     browsable = yes
     guest ok = yes
     read only = no
     create mask = 0755
- ```
- * **comment**
+ 
 
- Uma breve descrição do compartilhamento. Ajuste para atender às suas necessidades.
+ ### Criando o diretório compartilhado
 
- * **path**
+Antes de reiniciar o serviço Samba, certifique-se de criar os diretórios que deseja compartilhar e ajustar as permissões. Use os seguintes comandos no terminal:
 
- O caminho para o diretório que você deseja compartilhar.
+ 
+sudo mkdir -p /srv/samba/compartilhamento
+sudo chown nobody:nogroup /srv/samba/compartilhamento
+ 
 
- >**Nota**:  
- Este exemplo usa `/srv/samba/nome-de-compartilhamento` porque, de acordo com o *Filesystem Hierarchy Standard (FHS)*, **/srv** é onde os dados específicos do site devem ser servidos. Tecnicamente, os compartilhamentos do Samba podem ser colocados em qualquer lugar do sistema de arquivos, desde que as permissões estejam corretas, mas é recomendável aderir aos padrões.
+### Ativando a nova configuração
 
- * **browsable**
+Após editar o arquivo smb.conf e criar o diretório compartilhado, reinicie os serviços Samba para aplicar as alterações:
 
- Permite que clientes Windows naveguem no diretório compartilhado usando o Windows Explorer.
 
- * **guest ok**
-
- Permite que os clientes se conectem ao compartilhamento sem fornecer uma senha.
-
- * **read only**
-
- Determina se o compartilhamento é somente leitura ou se são concedidos privilégio de gravação. Os privilégios de gravação são permitidos somente quando o valor é *no*, como é visto neste exemplo. Se o valor for *yes*, o acesso ao compartilhamento será somente leitura.
-
- * **create mask**
-
- Determina as permissões que novos arquivos terão quando criados.
-
- ### Crie o diretório
-
- Agora que o Samba está configurado, o diretório precisa ser criado e as permissões alteradas. Em um terminal execute os seguintes comandos:
-
- ```
- sudo mkdir -p /srv/samba/compartilhamento
- sudo chown nobody:nogroup /srv/samba/compartilhamento
- ```
-A opção `-p` informa ao `mkdir` para criar a árvore de diretórios inteira, se ela ainda não existir.
-
-### Habilite a nova configuração
-
-Por fim, reinicie os serviços Samba para habilitar a nova configuração executando o seguinte comando:
-
-```
 sudo systemctl restart smbd.service nmbd.service
-```
 
-A partir de um cliente Windows, agora você poderá navegar até o servidor de arquivos Ubuntu e ver o diretório compartilhado. Se o seu cliente não mostrar o seu compartilhamento automaticamente, tente acessar o seu servidor pelo seu endereço IP, por exemplo `\\192.168.1.1`, em uma janela do Windows Explorer. Para verificar se tudo está funcionando, tente criar um diretório no Windows.
 
-Para compartilhamentos adicionais, basta criar novas seções *[nome-de-compartilhamento]* em `/etc/samba/smb.conf` e reiniciar o *Samba*. Apenas certifique-se que o diretório que você deseja compartilhar realmente exista e que as permissões estejam corretas.
+## Conclusão
 
-O compartilhamento de arquivo denominado *[compartilhamento]* e o caminho `/srv/samba/nome-de-compartilhamento` neste exemplo podem ser ajustados para se adequar ao seu ambiente. É uma boa ideia nomear um compartilhamento com o nome de um diretório no sistema de arquivos.
+Parabéns! Você configurou com sucesso o Samba como servidor de arquivos no seu Ubuntu. Agora, os clientes Windows na rede podem acessar e compartilhar arquivos conforme necessário.
+
+## Contribuição
+
+Se você tiver sugestões de melhorias ou correções para este guia, sinta-se à vontade para enviar uma pull request.
+
+## Referências
+
+* [Documentação oficial do Ubuntu: Configurando um Servidor de Arquivos com Samba](https://ubuntu.com/server/docs/samba-file-server)
+
+## Licença
+
+Este projeto está licenciado sob a Licença MIT.
