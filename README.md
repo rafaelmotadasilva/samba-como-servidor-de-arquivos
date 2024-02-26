@@ -29,14 +29,14 @@ sudo apt install samba
 
 ## Configurando o Samba como Servidor de Arquivos
 
-O arquivo de configuração principal do Samba está localizado em /etc/samba/smb.conf. Abra este arquivo em um editor de texto de sua preferência e ajuste as configurações conforme necessário. Aqui estão algumas configurações essenciais que você pode personalizar na seção *[global]*:
+O arquivo de configuração principal do Samba está localizado em `/etc/samba/smb.conf`. Abra este arquivo em um editor de texto de sua preferência e ajuste as configurações conforme necessário. Aqui estão algumas configurações essenciais que você pode personalizar na seção *[global]*:
 
-*workgroup*: Define o nome do grupo de trabalho.  
-*security*: Define o nível de segurança do Samba.
+**workgroup**: Define o nome do grupo de trabalho.  
+**security**: Define o nível de segurança do Samba.
 
-Para compartilhar diretórios específicos, adicione seções no arquivo smb.conf para cada diretório desejado, conforme o exemplo abaixo:
+Para compartilhar diretórios específicos, adicione seções no arquivo `smb.conf` para cada diretório desejado, conforme o exemplo abaixo:
 
-
+```
 [compartilhamento]
     comment = Descrição do Compartilhamento
     path = /srv/samba/compartilhamento
@@ -44,24 +44,24 @@ Para compartilhar diretórios específicos, adicione seções no arquivo smb.con
     guest ok = yes
     read only = no
     create mask = 0755
- 
+ ```
 
  ### Criando o diretório compartilhado
 
 Antes de reiniciar o serviço Samba, certifique-se de criar os diretórios que deseja compartilhar e ajustar as permissões. Use os seguintes comandos no terminal:
 
- 
+ ```
 sudo mkdir -p /srv/samba/compartilhamento
 sudo chown nobody:nogroup /srv/samba/compartilhamento
- 
+ ```
 
 ### Ativando a nova configuração
 
-Após editar o arquivo smb.conf e criar o diretório compartilhado, reinicie os serviços Samba para aplicar as alterações:
+Após editar o arquivo `smb.conf` e criar o diretório compartilhado, reinicie os serviços Samba para aplicar as alterações:
 
-
+```
 sudo systemctl restart smbd.service nmbd.service
-
+```
 
 ## Conclusão
 
