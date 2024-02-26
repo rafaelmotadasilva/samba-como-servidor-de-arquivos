@@ -46,6 +46,13 @@ Para compartilhar diretórios específicos, adicione seções no arquivo `smb.co
     create mask = 0755
  ```
 
+**comment**: Uma breve descrição do compartilhamento.  
+**path**: O caminho para o diretório que você deseja compartilhar.  
+**browsable**: Permite que clientes naveguem no diretório compartilhado usando o Windows Explorer.  
+**guest ok**: Permite que os clientes se conectem ao compartilhamento sem fornecer uma senha.
+**read only**: Determina se o compartilhamento é somente leitura ou se são concedidos privilégios de gravação.
+**create mask**: Determina as permissões que novos arquivos terão quando criados.
+
  ### Criando o Diretório Compartilhado
 
 Antes de reiniciar o serviço Samba, certifique-se de criar os diretórios que deseja compartilhar e ajustar as permissões. Use os seguintes comandos no terminal:
