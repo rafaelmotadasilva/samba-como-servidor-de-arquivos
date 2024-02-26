@@ -15,7 +15,7 @@ Este guia oferece instruções passo a passo para configurar o Samba como servid
 
 1. [Instalação do Samba](#instalação-do-samba)
 2. [Configurando o Samba como Servidor de Arquivos](#configurando-o-samba-como-servidor-de-arquivos)
-3. [Criando os Diretórios Compartilhados](#criando-os-diretórios-compartilhados)
+3. [Criando o Diretório Compartilhado](#criando-o-diretório-compartilhado)
 4. [Ativando a Nova Configuração](#ativando-a-nova-configuração)
 5. [Conclusão](#conclusão)
 
@@ -46,7 +46,7 @@ Para compartilhar diretórios específicos, adicione seções no arquivo `smb.co
     create mask = 0755
  ```
 
- ### Criando o diretório compartilhado
+ ### Criando o Diretório Compartilhado
 
 Antes de reiniciar o serviço Samba, certifique-se de criar os diretórios que deseja compartilhar e ajustar as permissões. Use os seguintes comandos no terminal:
 
@@ -55,7 +55,7 @@ sudo mkdir -p /srv/samba/compartilhamento
 sudo chown nobody:nogroup /srv/samba/compartilhamento
  ```
 
-### Ativando a nova configuração
+### Ativando a Nova Configuração
 
 Após editar o arquivo `smb.conf` e criar o diretório compartilhado, reinicie os serviços Samba para aplicar as alterações:
 
