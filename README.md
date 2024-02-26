@@ -23,9 +23,9 @@ Este guia oferece instruções passo a passo para configurar o Samba como servid
 
 Comece instalando o pacote `samba`. Abra um terminal e digite o seguinte comando:
 
-
+```
 sudo apt install samba
-
+```
 
 ## Configurando o Samba como Servidor de Arquivos
 
